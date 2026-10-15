@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+results/*.csv
+results/*.json
+results/*.md
+figures/*.png
+!results/.gitkeep
+!figures/.gitkeep

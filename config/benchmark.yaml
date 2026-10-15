@@ -1,0 +1,37 @@
+# Starter values only. Replace with the organizer's common definitions before the
+# benchmark is used as an official comparison. All starter edges are undirected;
+# the runner expands them to both directed CX directions for routing.
+metadata:
+  definition_status: STARTER_VALUES_NOT_OFFICIAL
+  source_note: "The supplied PDF says definitions are announced separately; they were not present in the attached copy."
+  shots: 4096
+  seed: 20261015
+  basis_gates: [rz, sx, x, cx]
+  routing_method: lookahead
+  optimization_level: 1
+  noise:
+    one_qubit_depolarizing: 0.001
+    two_qubit_depolarizing: 0.01
+    readout_error: 0.02
+models:
+  - id: 2016-inspired
+    label: 2016-inspired (starter graph)
+    qubits: 5
+    ports: [0, 3]
+    ancilla: 1
+    edges: [[0, 1], [1, 2], [2, 3], [3, 4], [4, 0]]
+    role: Historical baseline illustration; not an organizer-supplied graph.
+  - id: contemporary-ibm-style
+    label: Contemporary IBM-style (starter graph)
+    qubits: 5
+    ports: [0, 4]
+    ancilla: 2
+    edges: [[0, 1], [1, 2], [2, 3], [3, 4], [1, 4]]
+    role: Frozen teaching profile; replace with the designated backend snapshot.
+  - id: hyperbolic-inspired
+    label: Hyperbolic-inspired (starter graph)
+    qubits: 7
+    ports: [0, 6]
+    ancilla: 3
+    edges: [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 6], [6, 0], [0, 3], [3, 6]]
+    role: Small alternative-geometry illustration; not an official lattice.
